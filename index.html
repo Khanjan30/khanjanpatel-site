@@ -1,0 +1,764 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Khanjan Patel</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Khanjan Patel. Tech MBA candidate at Cornell University, former business intelligence lead at C1, building software for the power grid.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@300;400;500;600&family=Geist+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: warm full-bleed bands. A dusk hero of moving grid "ribbons", a hairline-ruled trio, a sand panel walking through three steps, then projects, life and a dark closing band. Single light look by design. */
+:root {
+  --cream: #f3f5f4;
+  --sand: #e5e9ee;
+  --card: #fbfcfd;
+  --ink: #0e1a2c;
+  --brown: #4c5a70;
+  --rule: #d3d9e2;
+  --orange: #f29a1f;
+  --amber: #ffc35a;
+  --night: #0b1424;
+  --accent-ink: #a8640a;
+  --on-dark: #eef2f7;
+  --serif: "Instrument Serif", "Iowan Old Style", Georgia, serif;
+  --sans: "Geist", "Helvetica Neue", Arial, sans-serif;
+  --mono: "Geist Mono", ui-monospace, Menlo, Consolas, monospace;
+  --gutter-l: max(16px, env(safe-area-inset-left, 0px));
+  --gutter-r: max(16px, env(safe-area-inset-right, 0px));
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body { background: var(--cream); color: var(--ink); font-family: var(--sans); font-size: 1rem; line-height: 1.55; font-weight: 400; }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 30; background: var(--night); }
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--orange); outline-offset: 3px; border-radius: 6px; }
+
+.inner { max-width: 1240px; margin: 0 auto; padding-left: var(--gutter-l); padding-right: var(--gutter-r); }
+.eyebrow { font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; }
+.serif { font-family: var(--serif); font-weight: 400; letter-spacing: -0.015em; }
+
+/* Nav */
+.nav {
+  position: fixed; z-index: 20; left: 50%; transform: translateX(-50%);
+  top: calc(env(safe-area-inset-top, 0px) + 14px);
+  display: flex; align-items: center; gap: 26px;
+  background: #ffffff; border-radius: 12px; padding: 8px 8px 8px 16px;
+  box-shadow: 0 6px 24px -10px rgba(14, 26, 44, 0.35);
+  width: max-content; max-width: calc(100% - 32px);
+}
+.brand { display: flex; align-items: center; gap: 8px; text-decoration: none; font-weight: 600; letter-spacing: -0.02em; font-size: 1.02rem; white-space: nowrap; }
+.brand svg { flex: none; }
+.nav ul { list-style: none; margin: 0; padding: 0; display: flex; gap: 20px; }
+.nav ul a { text-decoration: none; font-size: 0.9rem; color: var(--ink); }
+.nav ul a:hover { color: var(--orange); }
+.btn-orange {
+  font: 500 0.9rem var(--sans); color: var(--ink); text-decoration: none; border: 0; cursor: pointer;
+  background: linear-gradient(100deg, var(--orange), var(--amber)); padding: 10px 18px; border-radius: 8px; white-space: nowrap;
+}
+.btn-orange:hover { filter: brightness(1.05); }
+@media (max-width: 720px) { .nav ul { display: none; } .nav { gap: 14px; } }
+
+/* Hero */
+.hero { position: relative; overflow: hidden; background: #0b1424; color: var(--on-dark); }
+.hero canvas.waves { position: absolute; inset: 0; width: 100%; height: 100%; }
+.hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(6,12,24,0.72) 0%, rgba(6,12,24,0.45) 45%, rgba(6,12,24,0.05) 80%); pointer-events: none; }
+.hero .lines { position: absolute; inset: 0; pointer-events: none; z-index: 1; }
+.hero .lines i { position: absolute; background: rgba(225, 232, 242, 0.16); }
+.hero .inner { position: relative; z-index: 2; padding-block: 150px 84px; display: grid; grid-template-columns: 1.45fr 1fr; gap: 48px; align-items: end; }
+@media (max-width: 900px) { .hero .inner { grid-template-columns: 1fr; padding-block: 120px 56px; } }
+.hero .eyebrow { color: rgba(225, 232, 242, 0.8); margin-bottom: 22px; }
+.hero h1 { font-family: var(--serif); font-weight: 400; font-size: clamp(3rem, 8.2vw, 6.8rem); line-height: 0.95; letter-spacing: -0.03em; margin: 0 0 28px; text-wrap: balance; }
+.hero h1 em { font-style: italic; color: #ffc35a; }
+.hero p.lede { font-size: clamp(1.05rem, 1.6vw, 1.22rem); max-width: 46ch; margin: 0 0 32px; color: rgba(238, 242, 247, 0.92); }
+.hero-ctas { display: flex; gap: 10px; flex-wrap: wrap; }
+.btn-cream { font: 500 0.92rem var(--sans); background: var(--on-dark); color: var(--ink); padding: 12px 18px; border-radius: 8px; text-decoration: none; }
+.btn-line { font: 500 0.92rem var(--sans); color: var(--on-dark); padding: 11px 17px; border-radius: 8px; text-decoration: none; border: 1px solid rgba(225, 232, 242, 0.4); }
+.btn-line:hover { background: rgba(225, 232, 242, 0.08); }
+
+.facts { border-left: 1px solid rgba(225, 232, 242, 0.22); min-width: 0; }
+@media (max-width: 900px) { .facts { border-left: 0; border-top: 1px solid rgba(225, 232, 242, 0.22); } }
+.fact { padding: 16px 0 16px 22px; border-bottom: 1px solid rgba(225, 232, 242, 0.22); display: grid; grid-template-columns: 7.2rem 1fr; gap: 14px; align-items: baseline; }
+@media (max-width: 900px) { .fact { padding-left: 0; } }
+.fact:last-child { border-bottom: 0; }
+.fact b { font-family: var(--serif); font-weight: 400; font-size: 2.2rem; line-height: 1; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }
+.fact span { font-size: 0.88rem; color: rgba(238, 242, 247, 0.78); }
+
+/* Trio */
+.trio { border-bottom: 1px solid var(--rule); }
+.trio-row { display: grid; grid-template-columns: 1fr 2fr 1fr; border-top: 1px solid var(--rule); }
+.trio-row > * { border-right: 1px solid var(--rule); min-width: 0; }
+.trio-row > *:last-child { border-right: 0; }
+.trio-text { padding: 72px 40px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 18px; }
+.trio-text .eyebrow { color: var(--brown); }
+.trio-text h2 { font-family: var(--sans); font-weight: 500; font-size: clamp(1.8rem, 3.4vw, 2.9rem); line-height: 1.08; letter-spacing: -0.03em; margin: 0; max-width: 17ch; text-wrap: balance; }
+.trio-text p { margin: 0; color: var(--brown); max-width: 44ch; }
+.art { position: relative; min-height: 360px; overflow: hidden; }
+.spacer { min-height: 0; }
+@media (max-width: 860px) {
+  .trio-row { grid-template-columns: 1fr; }
+  .trio-row > * { border-right: 0; }
+  .spacer { display: none; }
+  .trio-text { padding: 56px 8px 32px; order: 1; }
+  .art { order: 2; min-height: 300px; margin: 0 var(--gutter-r) 40px var(--gutter-l); border-radius: 14px; }
+}
+
+/* art: customer grid */
+.art-find { background: linear-gradient(160deg, #f5ae3c, #e88a12); display: grid; place-items: center; padding: 28px; }
+.dotgrid { display: grid; grid-template-columns: repeat(10, 1fr); gap: 6px; width: min(240px, 100%); }
+.dotgrid i { aspect-ratio: 1; border-radius: 3px; background: rgba(238, 242, 247, 0.22); }
+.dotgrid i.top { background: #eef2f7; }
+.art-cap { position: absolute; left: 20px; right: 20px; bottom: 18px; display: flex; justify-content: space-between; gap: 10px; font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.08em; text-transform: uppercase; color: #eef2f7; }
+
+/* art: pipeline */
+.art-build { background: var(--sand); }
+.art-ground { background: linear-gradient(180deg, #16263f 0%, #0e1a2c 100%); }
+.art-ground svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+.art-build svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+.flow { stroke-dasharray: 6 8; animation: flow 1.6s linear infinite; }
+@keyframes flow { to { stroke-dashoffset: -28; } }
+@media (prefers-reduced-motion: reduce) { .flow { animation: none; } }
+
+/* art: waves */
+.art-next { background: #0e1a2c; }
+.art-next canvas { position: absolute; inset: 0; width: 100%; height: 100%; }
+
+/* Story band */
+.story { padding-block: 120px; }
+.story .inner { display: grid; grid-template-columns: 1fr 1.4fr; gap: 56px; align-items: start; }
+@media (max-width: 860px) { .story .inner { grid-template-columns: 1fr; gap: 20px; } .story { padding-block: 80px; } }
+.story .eyebrow { color: var(--brown); margin-bottom: 18px; display: block; }
+.story h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(2.6rem, 5.4vw, 4.6rem); line-height: 0.98; letter-spacing: -0.03em; margin: 0; text-wrap: balance; }
+.story h2 em { color: var(--accent-ink); }
+.story p { font-size: 1.15rem; margin: 0 0 18px; max-width: 58ch; }
+.story p:last-child { color: var(--brown); }
+
+/* Steps panel */
+.panel-wrap { padding-left: var(--gutter-l); padding-right: var(--gutter-r); }
+.panel { background: var(--sand); border-radius: 18px; max-width: 1400px; margin: 0 auto; }
+.panel-head { text-align: center; padding: 88px 24px 24px; }
+.panel-head .eyebrow { color: var(--brown); }
+.panel-head h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(2.4rem, 5vw, 4.2rem); line-height: 1; letter-spacing: -0.03em; margin: 14px 0 0; text-wrap: balance; }
+.step { display: grid; grid-template-columns: 1fr 1.1fr; gap: 48px; align-items: center; padding: 72px clamp(20px, 5vw, 72px); border-top: 1px solid var(--rule); }
+.step:first-of-type { border-top: 0; }
+@media (max-width: 900px) { .step { grid-template-columns: 1fr; gap: 32px; padding-block: 56px; } }
+.step-text { min-width: 0; color: #24324a; }
+.step-text .eyebrow { color: var(--brown); }
+.step-text h3 { font-family: var(--sans); font-weight: 500; font-size: clamp(1.9rem, 3.2vw, 2.6rem); letter-spacing: -0.03em; line-height: 1.05; margin: 22px 0 18px; }
+.step-text .sub { display: block; color: var(--brown); margin-bottom: 22px; }
+.step-text p { margin: 0 0 12px; max-width: 46ch; }
+.step-vis { min-width: 0; display: flex; justify-content: center; }
+
+.card { background: var(--card); border-radius: 14px; box-shadow: 0 1px 0 var(--rule); width: 100%; max-width: 480px; padding: 24px; }
+.route svg { width: 100%; height: auto; display: block; }
+.kv { list-style: none; margin: 0; padding: 0; }
+.kv li { display: grid; grid-template-columns: 1fr auto; gap: 16px; padding: 14px 0; border-bottom: 1px solid var(--rule); align-items: baseline; }
+.kv li:last-child { border-bottom: 0; }
+.kv span { font-size: 0.92rem; color: var(--brown); }
+.kv b { font-family: var(--serif); font-weight: 400; font-size: 1.6rem; letter-spacing: -0.01em; text-align: right; white-space: nowrap; }
+.card-label { color: var(--brown); margin-bottom: 6px; display: block; }
+
+.chart-tabs { display: flex; gap: 18px; margin-bottom: 12px; }
+.chart-tabs button { background: none; border: 0; padding: 0; font: 500 1rem var(--sans); color: #9aa6b8; cursor: pointer; }
+.chart-tabs button[aria-pressed="true"] { color: var(--ink); }
+.readout { display: flex; align-items: baseline; gap: 8px; margin-bottom: 4px; }
+.readout b { font-family: var(--serif); font-weight: 400; font-size: 2.6rem; line-height: 1; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }
+.readout span { font-family: var(--mono); font-size: 0.72rem; color: var(--brown); letter-spacing: 0.06em; text-transform: uppercase; }
+#curve { display: block; width: 100%; height: 210px; touch-action: pan-y; }
+.chart-note { font-size: 0.82rem; color: var(--brown); margin: 10px 0 0; }
+
+/* Projects */
+.projects { padding-block: 120px 40px; }
+.sec-title { display: flex; justify-content: space-between; align-items: end; gap: 24px; flex-wrap: wrap; margin-bottom: 40px; }
+.sec-title h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(2.4rem, 5vw, 4rem); line-height: 1; letter-spacing: -0.03em; margin: 8px 0 0; }
+.sec-title .eyebrow { color: var(--brown); }
+.sec-title p { margin: 0; max-width: 40ch; color: var(--brown); }
+.pgrid { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--rule); border-left: 1px solid var(--rule); }
+@media (max-width: 1000px) { .pgrid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .pgrid { grid-template-columns: 1fr; } }
+.proj { padding: 26px 22px 30px; border-right: 1px solid var(--rule); border-bottom: 1px solid var(--rule); min-width: 0; display: flex; flex-direction: column; gap: 10px; transition: background 0.25s ease; }
+.proj:hover { background: var(--card); }
+.proj .eyebrow { color: var(--accent-ink); }
+.proj h3 { font-family: var(--serif); font-weight: 400; font-size: 1.85rem; line-height: 1.02; letter-spacing: -0.02em; margin: 0; }
+.proj p { margin: 0; font-size: 0.95rem; color: var(--brown); }
+.proj.next .eyebrow { color: var(--brown); }
+
+/* Life */
+.life { padding-block: 80px 120px; }
+.lgrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+@media (max-width: 860px) { .lgrid { grid-template-columns: 1fr; } }
+.ltile { min-width: 0; }
+.lart { position: relative; aspect-ratio: 4 / 5; max-width: 100%; border-radius: 14px; overflow: hidden; margin-bottom: 18px; }
+@media (max-width: 860px) { .lart { aspect-ratio: 16 / 10; } }
+.ltile h3 { font-family: var(--sans); font-weight: 500; font-size: 1.35rem; letter-spacing: -0.02em; margin: 0 0 6px; }
+.ltile p { margin: 0; color: var(--brown); max-width: 42ch; }
+.lart-dj { background: var(--night); display: flex; align-items: center; justify-content: center; gap: 4px; padding: 0 12%; }
+.lart-dj i { flex: 1; max-width: 8px; border-radius: 4px; background: linear-gradient(var(--amber), var(--orange)); height: 20%; animation: eq 1.3s ease-in-out infinite; }
+@keyframes eq { 0%, 100% { height: 14%; } 50% { height: 72%; } }
+@media (prefers-reduced-motion: reduce) { .lart-dj i { animation: none; height: 40%; } }
+.lart-court { background: #1f3a5f; }
+.lart-court svg, .lart-mkt svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+.lart-mkt { background: var(--sand); }
+.lart .tagline { position: absolute; left: 16px; bottom: 14px; font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: #eef2f7; }
+.lart-mkt .tagline { color: var(--brown); }
+
+/* Toolkit */
+.kit { padding-block: 0 120px; }
+.kit-rows { border-top: 1px solid var(--rule); }
+.kit-row { display: grid; grid-template-columns: 220px 1fr; gap: 20px; padding: 18px 0; border-bottom: 1px solid var(--rule); align-items: baseline; }
+@media (max-width: 640px) { .kit-row { grid-template-columns: 1fr; gap: 6px; } }
+.kit-row .eyebrow { color: var(--brown); }
+.kit-row div { font-size: 1.05rem; }
+.kit-row div span + span::before { content: "·"; margin: 0 10px; color: var(--orange); }
+
+/* Contact */
+.contact { position: relative; overflow: hidden; background: var(--night); color: var(--on-dark); }
+.contact canvas { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0.85; }
+.contact::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(8,14,26,0.55), rgba(8,14,26,0.88)); pointer-events: none; }
+.contact .inner { position: relative; z-index: 2; padding-block: 130px 110px; text-align: center; display: flex; flex-direction: column; align-items: center; }
+.contact .eyebrow { color: rgba(225, 232, 242, 0.75); }
+.contact h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(2.8rem, 7vw, 5.8rem); line-height: 0.95; letter-spacing: -0.03em; margin: 18px 0 20px; max-width: 14ch; text-wrap: balance; }
+.contact p { color: rgba(238, 242, 247, 0.82); max-width: 50ch; margin: 0 0 32px; font-size: 1.08rem; }
+.contact-row { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; align-items: center; }
+.email { font-family: var(--mono); font-size: 0.95rem; padding: 11px 16px; border-radius: 8px; border: 1px solid rgba(225, 232, 242, 0.3); user-select: all; overflow-wrap: anywhere; }
+footer { background: var(--night); color: rgba(238, 242, 247, 0.6); font-size: 0.82rem; }
+footer .inner { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; padding-block: 22px 32px; border-top: 1px solid rgba(225, 232, 242, 0.12); }
+</style>
+</head>
+<body>
+
+
+<nav class="nav" aria-label="Main">
+  <a class="brand" href="#top" aria-label="Khanjan Patel, home">
+    <svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><path d="M1 15c3-6 5-6 7 0s4 6 6 0 4-8 7-2" fill="none" stroke="#f29a1f" stroke-width="2.2" stroke-linecap="round"/><circle cx="21" cy="13" r="1.1" fill="#f29a1f"/></svg>
+    Khanjan Patel
+  </a>
+  <ul>
+    <li><a href="#path">Path</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#life">Life</a></li>
+  </ul>
+  <a class="btn-orange" href="#contact">Get in touch</a>
+</nav>
+
+<main id="top">
+
+  <header class="hero">
+    <canvas class="waves" id="w-hero" aria-hidden="true"></canvas>
+    <div class="lines" aria-hidden="true">
+      <i style="left:0;right:0;top:118px;height:1px"></i>
+      <i style="top:0;bottom:0;right:33%;width:1px"></i>
+    </div>
+    <div class="inner">
+      <div>
+        <div class="eyebrow">Tech MBA, Cornell University · New York City</div>
+        <h1>I look for the pattern <em>behind</em> the result.</h1>
+        <p class="lede">I'm Khanjan, a Cornell Tech MBA student working to solve the power grid's toughest problems.</p>
+        <div class="hero-ctas">
+          <a class="btn-cream" href="#path">See my path</a>
+          <a class="btn-line" href="#contact">Get in touch</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="trio" aria-label="What I bring">
+    <div class="trio-row">
+      <div class="spacer"></div>
+      <div class="trio-text">
+        <span class="eyebrow">Data</span>
+        <h2>I rebuilt the data a company runs on</h2>
+        <p>At C1, I took ownership of the data behind every sales decision. I rebuilt the pipelines from SQL Server, Xactly, our CRM and QlikView into one master model, so Finance, Marketing, Sales and Operations all worked from the same numbers. That model is also what surfaced a hidden risk: 10% of customers drove 87% of recurring revenue.</p>
+      </div>
+      <div class="art art-build" aria-hidden="true">
+        <svg viewBox="0 0 300 360" preserveAspectRatio="xMidYMid meet">
+          <g fill="none" stroke="#d3d9e2" stroke-width="1.5"><path d="M22 70 C 90 70, 90 180, 128 180"/><path d="M22 140 C 90 140, 90 180, 128 180"/><path d="M22 220 C 90 220, 90 180, 128 180"/><path d="M22 290 C 90 290, 90 180, 128 180"/><path d="M172 180 C 210 180, 210 70, 278 70"/><path d="M172 180 C 210 180, 210 140, 278 140"/><path d="M172 180 C 210 180, 210 220, 278 220"/><path d="M172 180 C 210 180, 210 290, 278 290"/></g>
+          <g fill="none" stroke="#f29a1f" stroke-width="1.6"><path class="flow" d="M22 70 C 90 70, 90 180, 128 180"/><path class="flow" d="M22 140 C 90 140, 90 180, 128 180"/><path class="flow" d="M22 220 C 90 220, 90 180, 128 180"/><path class="flow" d="M22 290 C 90 290, 90 180, 128 180"/><path class="flow" d="M172 180 C 210 180, 210 70, 278 70"/><path class="flow" d="M172 180 C 210 180, 210 140, 278 140"/><path class="flow" d="M172 180 C 210 180, 210 220, 278 220"/><path class="flow" d="M172 180 C 210 180, 210 290, 278 290"/></g>
+          <rect x="124" y="160" width="52" height="40" rx="8" fill="#f29a1f"/>
+          <g font-family="Geist Mono, monospace" font-size="7.5" fill="#4c5a70" letter-spacing="0.6"><text x="22" y="62">SQL SERVER</text><text x="22" y="132">XACTLY</text><text x="22" y="212">CRM</text><text x="22" y="282">QLIKVIEW</text><text x="278" y="62" text-anchor="end">FINANCE</text><text x="278" y="132" text-anchor="end">MARKETING</text><text x="278" y="212" text-anchor="end">SALES</text><text x="278" y="282" text-anchor="end">OPERATIONS</text><text x="150" y="150" text-anchor="middle" fill="#0e1a2c">MASTER MODEL</text></g>
+          <circle cx="22" cy="70" r="3.5" fill="#0e1a2c"/><circle cx="278" cy="70" r="3.5" fill="#f29a1f"/><circle cx="22" cy="140" r="3.5" fill="#0e1a2c"/><circle cx="278" cy="140" r="3.5" fill="#f29a1f"/><circle cx="22" cy="220" r="3.5" fill="#0e1a2c"/><circle cx="278" cy="220" r="3.5" fill="#f29a1f"/><circle cx="22" cy="290" r="3.5" fill="#0e1a2c"/><circle cx="278" cy="290" r="3.5" fill="#f29a1f"/>
+        </svg>
+      </div>
+    </div>
+    <div class="trio-row">
+      <div class="art art-ground" aria-hidden="true">
+        <svg viewBox="0 0 300 360" preserveAspectRatio="xMidYMid slice">
+          <circle cx="210" cy="108" r="34" fill="#ffc35a" opacity="0.95"/>
+          <line x1="0" y1="168" x2="300" y2="168" stroke="#eef2f7" stroke-opacity="0.5"/>
+          <g fill="#f29a1f">
+            <polygon points="110,176 190,176 194,182 106,182" opacity="0.55"/>
+            <polygon points="88,194 212,194 220,204 80,204" opacity="0.65"/>
+            <polygon points="60,220 240,220 254,236 46,236" opacity="0.75"/>
+            <polygon points="24,258 276,258 298,282 2,282" opacity="0.85"/>
+            <polygon points="-30,310 330,310 360,346 -60,346" opacity="0.95"/>
+          </g>
+          <g stroke="#0e1a2c" stroke-opacity="0.5">
+            <line x1="150" y1="176" x2="150" y2="346"/><line x1="105" y1="194" x2="40" y2="346"/><line x1="195" y1="194" x2="260" y2="346"/>
+          </g>
+        </svg>
+        <div class="art-cap"><span>Khavda, India</span><span>30 gigawatts planned</span></div>
+      </div>
+      <div class="trio-text">
+        <span class="eyebrow">Ground</span>
+        <h2>Learning clean energy from the people who build it</h2>
+        <p>Spent four months at Khavda, India, the world's largest renewable energy park, shadowing teams across solar, wind, battery storage and transmission to see how they run as one system.</p>
+      </div>
+      <div class="spacer"></div>
+    </div>
+    <div class="trio-row">
+      <div class="spacer"></div>
+      <div class="trio-text">
+        <span class="eyebrow">Grid</span>
+        <h2>Now I'm working on the grid's hardest hours</h2>
+        <p>Data centers, electric cars and electric heating are adding demand faster than new power plants and power lines can be built. The strain shows up in a few peak hours each day. I'm working on easing it with virtual power plants: home batteries, car chargers and smart devices that shift their power use together when the grid needs it most.</p>
+      </div>
+      <div class="art art-next" aria-hidden="true">
+        <canvas id="w-tile"></canvas>
+        <div class="art-cap"><span>GridRun</span><span>In progress</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="story" aria-labelledby="story-h">
+    <div class="inner">
+      <div>
+        <span class="eyebrow">How I think</span>
+        <h2 id="story-h">Same habit, <em>different</em> courts.</h2>
+      </div>
+      <div>
+        <p>For 12 years I played tennis at the national level. You don't win at that level by hitting harder. You win by studying the other player's habits and adjusting before the score shows it.</p>
+        <p>I've used that habit everywhere since. At C1, it's how I noticed that a small group of customers was holding up most of the revenue. In the desert at Khavda, it meant learning how clean power is actually made before it ever reaches the grid.</p>
+        <p>Now I'm pointing it at the grid. Its hardest problem is timing, a few hours each day when everyone needs power at once.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="panel-wrap" id="path">
+    <div class="panel">
+      <div class="panel-head">
+        <span class="eyebrow">The path so far</span>
+        <h2>From reading data to building for the grid</h2>
+      </div>
+
+      <div class="step">
+        <div class="step-text">
+          <span class="eyebrow">Step 1</span>
+          <h3>Learn how a business runs on data</h3>
+          <span class="eyebrow sub">Management Information Systems · 2023</span>
+          <p>I came to the US from India and studied Management Information Systems at San Jose State, graduating as a Dean's Scholar. It's where I learned how businesses actually run on their data.</p>
+        </div>
+        <div class="step-vis">
+          <div class="card route">
+            <span class="eyebrow card-label">Route</span>
+            <svg viewBox="0 0 440 200" role="img" aria-label="A route from India to San Jose, California, to New York City">
+              <path d="M40 150 C 120 40, 200 40, 230 110" fill="none" stroke="#d3d9e2" stroke-width="2" stroke-dasharray="4 6"/>
+              <path d="M230 110 C 280 30, 360 30, 400 90" fill="none" stroke="#f29a1f" stroke-width="2" stroke-dasharray="4 6"/>
+              <circle cx="40" cy="150" r="6" fill="#0e1a2c"/><circle cx="230" cy="110" r="6" fill="#0e1a2c"/>
+              <circle cx="400" cy="90" r="9" fill="#f29a1f"/><circle cx="400" cy="90" r="16" fill="none" stroke="#f29a1f" stroke-opacity="0.35"/>
+              <g font-family="Geist Mono, monospace" font-size="11" fill="#4c5a70" letter-spacing="1">
+                <text x="22" y="180">INDIA</text><text x="190" y="140">SAN JOSE, CA</text><text x="330" y="130">NEW YORK CITY</text>
+              </g>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-text">
+          <span class="eyebrow">Step 2</span>
+          <h3>Fix the data behind the decisions</h3>
+          <span class="eyebrow sub">Sales operations and business intelligence · until Feb 2026</span>
+          <p>At C1, I owned the company's Power BI setup end to end, from how data came in to what leaders saw each week.</p>
+          <p>I briefed the C-suite, vice presidents and sales directors every week, and my recommendations on what to stop selling and how reps log deals were adopted.</p>
+        </div>
+        <div class="step-vis">
+          <div class="card">
+            <span class="eyebrow card-label">What changed</span>
+            <ul class="kv">
+              <li><span>Time back, per person</span><b>5+ hrs/wk</b></li>
+              <li><span>Data sources pulled into one master model</span><b>4</b></li>
+              <li><span>Teams working from that model</span><b>4</b></li>
+              <li><span>Deal forecasts, in months</span><b>1 · 3 · 6</b></li>
+              <li><span>Recurring revenue from top 10% of customers</span><b>87%</b></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-text">
+          <span class="eyebrow">Step 3</span>
+          <h3>See clean energy built at scale</h3>
+          <span class="eyebrow sub">On the ground in western India · Feb to May 2026</span>
+          <p>Before Cornell Tech, I spent four months at Khavda, the world's largest renewable energy park. It's rising out of the salt desert of Kutch in western India, planned at 30 gigawatts of solar and wind across an area about five times the size of Paris.</p>
+          <p>I wanted to learn renewable power where it's actually built, not from reports. On site I saw what it takes to turn open desert into a working power system, from the panels and batteries to the lines that carry the power out.</p>
+        </div>
+        <div class="step-vis">
+          <div class="card">
+            <span class="eyebrow card-label">The site at a glance</span>
+            <svg viewBox="0 0 440 120" role="img" aria-label="Rows of solar panels stretching to the horizon" style="width:100%;height:auto;display:block;margin:6px 0 4px">
+              <defs><linearGradient id="pv" x1="0" x2="1"><stop offset="0" stop-color="#f29a1f"/><stop offset="1" stop-color="#ffc35a"/></linearGradient></defs>
+              <circle cx="372" cy="30" r="16" fill="#ffc35a" opacity="0.9"/>
+              <line x1="0" y1="56" x2="440" y2="56" stroke="#d3d9e2"/>
+              <g fill="url(#pv)">
+                <polygon points="150,60 290,60 296,66 144,66"/>
+                <polygon points="110,72 330,72 340,82 100,82"/>
+                <polygon points="60,90 380,90 396,104 44,104"/>
+              </g>
+              <g stroke="#0e1a2c" stroke-opacity="0.25" stroke-width="1">
+                <line x1="220" y1="60" x2="220" y2="66"/><line x1="220" y1="72" x2="220" y2="82"/><line x1="220" y1="90" x2="220" y2="104"/>
+                <line x1="150" y1="90" x2="140" y2="104"/><line x1="290" y1="90" x2="300" y2="104"/>
+              </g>
+            </svg>
+            <ul class="kv">
+              <li><span>Planned capacity</span><b>30 gigawatts</b></li>
+              <li><span>Land area</span><b>538 km²</b></li>
+              <li><span>Compared to Paris</span><b>About 5×</b></li>
+              <li><span>My time on site</span><b>4 months</b></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-text">
+          <span class="eyebrow">Step 4</span>
+          <h3>Build for the grid</h3>
+          <span class="eyebrow sub">Tech MBA, venture investing and a startup · now</span>
+          <p>At Cornell Tech I'm working toward a company through the Startup Studio path, and I'm an associate at Big Red Ventures, Cornell's student-run venture fund.</p>
+          <p>The problem I keep coming back to is on the right: a few hours a day when power costs the most and the grid is under the most strain.</p>
+        </div>
+        <div class="step-vis">
+          <div class="card">
+            <div class="chart-tabs" role="group" aria-label="Season">
+              <button type="button" id="s-winter" aria-pressed="true">Winter</button>
+              <button type="button" id="s-summer" aria-pressed="false">Summer</button>
+            </div>
+            <div class="readout"><b id="r-hour">Now</b><span id="r-val">Your time right now</span></div>
+            <canvas id="curve" aria-label="Electricity demand over a day. Winter has a morning peak and a larger evening peak. Summer climbs to one late-afternoon peak."></canvas>
+            <p class="chart-note" id="chart-note">Illustrative shape. Winter days usually peak twice, as people wake up and again when they get home.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="projects" id="projects" aria-labelledby="proj-h">
+    <div class="inner">
+      <div class="sec-title">
+        <div>
+          <span class="eyebrow">Projects</span>
+          <h2 id="proj-h">Things I've built and studied</h2>
+        </div>
+        <p>Energy tools, products, and work for real businesses.</p>
+      </div>
+      <div class="pgrid">
+        <article class="proj">
+          <span class="eyebrow">Energy · Agents</span>
+          <h3>ChainScope</h3>
+          <p>An agent that maps the energy technology value chain, explains how each business in it makes money, and sizes up competitors at every stage.</p>
+        </article>
+        <article class="proj">
+          <span class="eyebrow">Energy · Finance</span>
+          <h3>Project Helios</h3>
+          <p>An investment case for a solar project that ties expected power output to projected cash flows, to test whether the capital ask holds up.</p>
+        </article>
+        <article class="proj">
+          <span class="eyebrow">Energy · Agents</span>
+          <h3>Bottleneck Scanner</h3>
+          <p>Built for Agent Studio. It starts from the bottleneck and works outward to find where energy technology is actually stuck.</p>
+        </article>
+        <article class="proj next">
+          <span class="eyebrow">Up next</span>
+          <h3>Peak alerts for New York</h3>
+          <p>A tool that warns New York City households about tomorrow's grid peak and points them to programs that pay them to shift their usage.</p>
+        </article>
+        <article class="proj">
+          <span class="eyebrow">Consulting · Luxury retail</span>
+          <h3>Shivaay Luxury Living</h3>
+          <p>A high-end furniture showroom with big-ticket sales and long buying cycles. I pulled scattered sales records into one model and built dashboards that follow every lead to a closed sale, show which clients and pieces drive revenue, and match inventory to what's selling.</p>
+        </article>
+        <article class="proj">
+          <span class="eyebrow">Consulting · Hospitality</span>
+          <h3>Artistry Café</h3>
+          <p>Gave the owners their first full view of the business: one sales database feeding dashboards on daily revenue, top and slow-selling items, and stock levels, reviewed on a regular schedule.</p>
+        </article>
+        <article class="proj">
+          <span class="eyebrow">Product</span>
+          <h3>TableSplit</h3>
+          <p>Scan a code at the table and split the bill with friends. A working demo, and the project for my user research class.</p>
+        </article>
+        <article class="proj">
+          <span class="eyebrow">Research</span>
+          <h3>How Southwest wins</h3>
+          <p>My undergraduate capstone. Southwest's edge comes from how it runs, with one type of plane and fast turnarounds, more than from low prices.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="life" id="life" aria-labelledby="life-h">
+    <div class="inner">
+      <div class="sec-title">
+        <div>
+          <span class="eyebrow">Off the clock</span>
+          <h2 id="life-h">It's all about timing</h2>
+        </div>
+        <p>The things I love outside work come down to the same thing that makes the grid hard.</p>
+      </div>
+      <div class="lgrid">
+        <div class="ltile">
+          <div class="lart lart-dj" aria-hidden="true" id="eq"><span class="tagline">Afro House · Melodic techno</span></div>
+          <h3>DJing</h3>
+          <p>I play Afro House and deep melodic techno. A good mix comes down to bringing the next track in at exactly the right beat.</p>
+        </div>
+        <div class="ltile">
+          <div class="lart lart-court" aria-hidden="true">
+            <svg viewBox="0 0 200 250" preserveAspectRatio="xMidYMid slice">
+              <g fill="none" stroke="#eef2f7" stroke-width="1.6" opacity="0.9">
+                <rect x="40" y="25" width="120" height="200"/>
+                <line x1="55" y1="25" x2="55" y2="225"/><line x1="145" y1="25" x2="145" y2="225"/>
+                <line x1="55" y1="75" x2="145" y2="75"/><line x1="55" y1="175" x2="145" y2="175"/>
+                <line x1="100" y1="75" x2="100" y2="175"/>
+                <line x1="30" y1="125" x2="170" y2="125" stroke-width="2.4"/>
+              </g>
+              <circle cx="128" cy="96" r="5" fill="#e8f25c"/>
+            </svg>
+            <span class="tagline">12 years · national level</span>
+          </div>
+          <h3>Tennis & pickleball</h3>
+          <p>Twelve years at the national level. Timing beats power almost every time. I still play, and these days I compete in pickleball too.</p>
+        </div>
+        <div class="ltile">
+          <div class="lart lart-mkt" aria-hidden="true">
+            <svg viewBox="0 0 200 250" preserveAspectRatio="xMidYMid slice" id="candles"></svg>
+            <span class="tagline">Stocks · Crypto · Physical assets</span>
+          </div>
+          <h3>Investing</h3>
+          <p>I invest across countries in stocks, crypto and physical assets. Picking the right asset is half of it. Knowing when to act is the other half.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="kit" aria-labelledby="kit-h">
+    <div class="inner">
+      <div class="sec-title">
+        <div>
+          <span class="eyebrow">Toolkit</span>
+          <h2 id="kit-h">What I work with</h2>
+        </div>
+      </div>
+      <div class="kit-rows">
+        <div class="kit-row"><span class="eyebrow">Data</span><div><span>SQL</span><span>SQL Server</span><span>BigQuery</span><span>Python</span><span>Excel</span></div></div>
+        <div class="kit-row"><span class="eyebrow">Reporting</span><div><span>Power BI</span><span>DAX</span><span>Tableau</span><span>QlikView</span><span>Alteryx</span></div></div>
+        <div class="kit-row"><span class="eyebrow">Agents & automation</span><div><span>Claude</span><span>OpenAI Codex</span><span>Power Automate</span><span>Zapier</span></div></div>
+        <div class="kit-row"><span class="eyebrow">Business systems</span><div><span>Salesforce</span><span>Microsoft Dynamics</span><span>Xactly</span><span>HubSpot</span><span>Figma</span><span>Vercel</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact" aria-labelledby="contact-h">
+    <canvas id="w-contact" aria-hidden="true"></canvas>
+    <div class="inner">
+      <span class="eyebrow">Get in touch</span>
+      <h2 id="contact-h">Working on the grid? Let's talk.</h2>
+      <p>Energy, data, early-stage startups, or a good conversation about how things work under the surface.</p>
+      <div class="contact-row">
+        <span class="email" id="email">khanjanp3003@gmail.com</span>
+        <button class="btn-orange" id="copy" type="button">Copy email</button>
+        <a class="btn-line" href="https://www.linkedin.com/in/khanjan-patel30/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="inner">
+    <span>© 2026 Khanjan Patel</span>
+    <span>New York City, NY</span>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function hex(h) { h = h.replace('#', ''); return [parseInt(h.slice(0,2),16), parseInt(h.slice(2,4),16), parseInt(h.slice(4,6),16)]; }
+  function mix(a, b, t) { return 'rgb(' + [0,1,2].map(function (i) { return Math.round(a[i] + (b[i] - a[i]) * t); }).join(',') + ')'; }
+
+  // Flowing ribbon field, drawn at reduced resolution
+  function waves(canvas, c0, c1, opts) {
+    opts = opts || {};
+    var ctx = canvas.getContext('2d');
+    var A = hex(c0), B = hex(c1);
+    var bands = opts.bands || 16, speed = opts.speed || 0.18, visible = true, t = Math.random() * 10;
+    function size() {
+      var s = opts.scale || 0.6;
+      canvas.width = Math.max(1, Math.round(canvas.clientWidth * s));
+      canvas.height = Math.max(1, Math.round(canvas.clientHeight * s));
+    }
+    function frame() {
+      var w = canvas.width, h = canvas.height;
+      ctx.fillStyle = mix(A, B, 0.15); ctx.fillRect(0, 0, w, h);
+      for (var i = 0; i < bands; i++) {
+        var k = i / (bands - 1);
+        var base = -0.35 * h + k * h * 1.55;
+        ctx.beginPath();
+        ctx.moveTo(0, h);
+        for (var x = 0; x <= w; x += 6) {
+          var u = x / w;
+          var y = base - u * h * 0.45
+            + Math.sin(u * 5.2 + t + i * 0.42) * h * 0.05
+            + Math.sin(u * 2.1 - t * 0.7 + i * 0.9) * h * 0.035;
+          ctx.lineTo(x, y);
+        }
+        ctx.lineTo(w, h); ctx.closePath();
+        var shade = (i % 2 ? 0.08 : -0.06);
+        ctx.fillStyle = mix(A, B, Math.min(1, Math.max(0, 0.25 + k * 0.75 + shade)));
+        ctx.fill();
+      }
+    }
+    function loop() { if (visible) { t += speed / 60; frame(); } requestAnimationFrame(loop); }
+    size(); frame();
+    window.addEventListener('resize', function () { size(); frame(); });
+    if (!reduce) {
+      try {
+        new IntersectionObserver(function (es) { visible = es[0].isIntersecting; }).observe(canvas);
+      } catch (e) {}
+      requestAnimationFrame(loop);
+    }
+  }
+  waves(document.getElementById('w-hero'), '#050b16', '#24446f', { bands: 18 });
+  waves(document.getElementById('w-tile'), '#0b1424', '#f29a1f', { bands: 12, scale: 0.8 });
+  waves(document.getElementById('w-contact'), '#050b16', '#1c3558', { bands: 14, speed: 0.12 });
+
+  // DJ bars
+  var eq = document.getElementById('eq');
+  for (var j = 0; j < 22; j++) { var b = document.createElement('i'); b.style.animationDelay = (Math.sin(j * 1.7) * 0.6 + 0.6).toFixed(2) + 's'; b.style.animationDuration = (1 + (j % 5) * 0.12).toFixed(2) + 's'; eq.insertBefore(b, eq.firstChild); }
+
+  // Candles
+  (function () {
+    var svg = document.getElementById('candles'), ns = 'http://www.w3.org/2000/svg', y = 150, out = '';
+    for (var c = 0; c < 12; c++) {
+      var x = 22 + c * 14.5, o = y, cl = y + (Math.sin(c * 1.9) * 18 - 6);
+      var hi = Math.min(o, cl) - 8 - (c % 3) * 4, lo = Math.max(o, cl) + 8 + (c % 2) * 5;
+      var up = cl < o, col = up ? '#f29a1f' : '#0e1a2c';
+      out += '<line x1="' + (x + 4) + '" y1="' + hi + '" x2="' + (x + 4) + '" y2="' + lo + '" stroke="' + col + '" stroke-width="1.2"/>';
+      out += '<rect x="' + x + '" y="' + Math.min(o, cl) + '" width="8" height="' + Math.max(3, Math.abs(cl - o)) + '" rx="1" fill="' + col + '"/>';
+      y = cl;
+    }
+    svg.innerHTML = out;
+  })();
+
+  // Load curve card
+  var seasons = {
+    winter: { load: [66,62,60,59,60,65,76,88,93,90,86,83,81,80,80,82,88,96,100,99,95,88,79,71,66], peaks: [[7,9.5],[17,20.5]],
+      note: 'Illustrative shape. Winter days usually peak twice, as people wake up and again when they get home. The dark dot is where your clock is right now.' },
+    summer: { load: [62,58,55,53,53,56,63,71,77,81,84,87,89,91,93,95,97,99,100,97,92,85,76,68,62], peaks: [[16,20]],
+      note: 'Illustrative shape. In summer, air conditioning pushes demand up all day to one late-afternoon peak. The dark dot is where your clock is right now.' }
+  };
+  var season = 'winter', other = 'summer';
+  var canvas = document.getElementById('curve'), ctx = canvas.getContext('2d');
+  var hover = null, progress = reduce ? 1 : 0;
+
+  function label(h) { var hh = Math.round(h) % 24, ap = hh < 12 ? 'AM' : 'PM', d = hh % 12 === 0 ? 12 : hh % 12; return d + ' ' + ap; }
+  function val(arr, x) { var i = Math.floor(x), f = x - i; var a = arr[Math.min(24, i)], b = arr[Math.min(24, i + 1)]; return a + (b - a) * f; }
+  function nowHour() { var d = new Date(); return d.getHours() + d.getMinutes() / 60; }
+  function clock() { var d = new Date(), h = d.getHours(), m = d.getMinutes(); return (h % 12 === 0 ? 12 : h % 12) + ':' + (m < 10 ? '0' : '') + m + ' ' + (h < 12 ? 'AM' : 'PM'); }
+  function inPeak(x) { return seasons[season].peaks.some(function (p) { return x >= p[0] && x <= p[1]; }); }
+
+  function draw() {
+    var dpr = window.devicePixelRatio || 1, w = canvas.clientWidth, h = canvas.clientHeight;
+    if (canvas.width !== Math.round(w * dpr)) { canvas.width = Math.round(w * dpr); canvas.height = Math.round(h * dpr); }
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0); ctx.clearRect(0, 0, w, h);
+    var pT = 10, pB = 26, min = 45, max = 104;
+    function X(hr) { return 4 + (w - 8) * hr / 24; }
+    function Y(v) { return pT + (h - pT - pB) * (1 - (v - min) / (max - min)); }
+
+    seasons[season].peaks.forEach(function (p) { ctx.fillStyle = 'rgba(242,154,31,0.14)'; ctx.fillRect(X(p[0]), pT, X(p[1]) - X(p[0]), h - pT - pB); });
+
+    function curve(arr, upto) {
+      ctx.beginPath();
+      for (var s = 0; s <= 24 * upto; s += 0.25) { var px = X(s), py = Y(val(arr, s)); s ? ctx.lineTo(px, py) : ctx.moveTo(px, py); }
+    }
+    ctx.lineJoin = 'round'; ctx.lineCap = 'round';
+    curve(seasons[other].load, 1); ctx.strokeStyle = 'rgba(76,90,112,0.28)'; ctx.lineWidth = 2; ctx.stroke();
+    curve(seasons[season].load, progress); ctx.strokeStyle = '#f29a1f'; ctx.lineWidth = 2.6; ctx.stroke();
+
+    ctx.fillStyle = '#8795aa'; ctx.font = '10px "Geist Mono", monospace';
+    [[0,'12 AM'],[6,'6 AM'],[12,'12 PM'],[18,'6 PM'],[24,'12 AM']].forEach(function (t) {
+      ctx.textAlign = t[0] === 0 ? 'left' : t[0] === 24 ? 'right' : 'center'; ctx.fillText(t[1], X(t[0]), h - 6);
+    });
+
+    var arr = seasons[season].load, live = hover === null, cur = live ? nowHour() : hover, v = val(arr, cur);
+    if (progress >= 1) {
+      ctx.strokeStyle = live ? '#0e1a2c' : '#d3d9e2'; ctx.globalAlpha = live ? 0.35 : 1; ctx.lineWidth = 1;
+      ctx.setLineDash(live ? [3, 4] : []);
+      ctx.beginPath(); ctx.moveTo(X(cur), pT); ctx.lineTo(X(cur), h - pB); ctx.stroke();
+      ctx.setLineDash([]); ctx.globalAlpha = 1;
+      if (live) { ctx.beginPath(); ctx.arc(X(cur), Y(v), 9, 0, Math.PI * 2); ctx.fillStyle = 'rgba(242,154,31,0.22)'; ctx.fill(); }
+      ctx.beginPath(); ctx.arc(X(cur), Y(v), 4.5, 0, Math.PI * 2); ctx.fillStyle = live ? '#0e1a2c' : '#f29a1f'; ctx.fill();
+      if (live) {
+        ctx.font = '500 10px "Geist Mono", monospace'; ctx.fillStyle = '#0e1a2c';
+        ctx.textAlign = X(cur) < 30 ? 'left' : X(cur) > w - 30 ? 'right' : 'center';
+        ctx.fillText('NOW', X(cur), Math.max(pT + 8, Y(v) - 14));
+      }
+    }
+    document.getElementById('r-hour').textContent = live ? clock() : label(cur);
+    document.getElementById('r-val').textContent = live
+      ? 'Your time now · ' + Math.round(v) + '% of daily peak' + (inPeak(cur) ? ' · peak hours' : '')
+      : Math.round(v) + '% of daily peak';
+  }
+
+  function setSeason(s) {
+    season = s; other = s === 'winter' ? 'summer' : 'winter';
+    document.getElementById('s-winter').setAttribute('aria-pressed', s === 'winter');
+    document.getElementById('s-summer').setAttribute('aria-pressed', s === 'summer');
+    document.getElementById('chart-note').textContent = seasons[s].note;
+    progress = reduce ? 1 : 0; animate();
+  }
+  document.getElementById('s-winter').addEventListener('click', function () { setSeason('winter'); });
+  document.getElementById('s-summer').addEventListener('click', function () { setSeason('summer'); });
+  canvas.addEventListener('pointermove', function (e) { var r = canvas.getBoundingClientRect(); hover = Math.max(0, Math.min(24, (e.clientX - r.left) / r.width * 24)); draw(); });
+  canvas.addEventListener('pointerleave', function () { hover = null; draw(); });
+  window.addEventListener('resize', draw);
+
+  function animate() {
+    if (progress >= 1) { draw(); return; }
+    (function step() { progress = Math.min(1, progress + 0.022); draw(); if (progress < 1) requestAnimationFrame(step); })();
+  }
+  (function () {
+    var mo = new Date().getMonth();
+    var s0 = (mo >= 4 && mo <= 8) ? 'summer' : 'winter';
+    season = s0; other = s0 === 'winter' ? 'summer' : 'winter';
+    document.getElementById('s-winter').setAttribute('aria-pressed', s0 === 'winter');
+    document.getElementById('s-summer').setAttribute('aria-pressed', s0 === 'summer');
+    document.getElementById('chart-note').textContent = seasons[s0].note;
+  })();
+  setInterval(function () { if (hover === null) draw(); }, 30000);
+  draw();
+  try {
+    var seen = false;
+    new IntersectionObserver(function (es) { if (es[0].isIntersecting && !seen) { seen = true; animate(); } }, { threshold: 0.4 }).observe(canvas);
+  } catch (e) { progress = 1; draw(); }
+  setTimeout(function () { if (progress === 0) { progress = 1; draw(); } }, 4000);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(draw);
+
+  // Copy email
+  var btn = document.getElementById('copy');
+  btn.addEventListener('click', function () {
+    var el = document.getElementById('email');
+    function sel() { var r = document.createRange(); r.selectNodeContents(el); var s = getSelection(); s.removeAllRanges(); s.addRange(r); btn.textContent = 'Selected'; }
+    try { navigator.clipboard.writeText(el.textContent).then(function () { btn.textContent = 'Copied'; setTimeout(function () { btn.textContent = 'Copy email'; }, 1800); }, sel); } catch (e) { sel(); }
+  });
+})();
+</script>
+
+</body>
+</html>
